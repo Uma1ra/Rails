@@ -13,7 +13,7 @@ class ListsController < ApplicationController
       redirect_to list_path(list.id)
     
     else
-      render :index
+      render :new
       
     end
     
