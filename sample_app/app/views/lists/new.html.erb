@@ -1,6 +1,10 @@
 <h1>新規投稿</h1>
 
 <% if @list.errors.any? %>
+  <div>
+    <%= flash[:notice] %>
+  </div>
+  
   <%= @list.errors.count %>件のエラーが発生しました
   
   <ul>
