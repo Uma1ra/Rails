@@ -10,7 +10,7 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
 
     if @list.save
-      redirect_to list_path(list.id)
+      redirect_to list_path(@list.id)
     
     else
       render :new
@@ -45,7 +45,7 @@ class ListsController < ApplicationController
     
   end
   
-  def destroys
+  def destroy
     list = List.find(params[:id])
     list.destroy
     redirect_to "/lists"
